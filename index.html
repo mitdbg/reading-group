@@ -7,7 +7,9 @@
 .entry-date {
   float: right;
   background-color: lightgrey;
-  padding: 3px 20px;
+  padding: 3px;
+  width: 70px;
+  text-align: center;
 }
     </style>
   </head>
@@ -16,63 +18,33 @@
       <div class="row">
         <div class="col-md-3">
           <div class="title"><h1>DB Reading Group</h1></div>
-          <div class="subtitle lead">Reading awesome papers, one every week</div>
+          <div class="subtitle lead">
+            Reading awesome papers, <br>one every week
+            <br><br>
+            Every Wednesday<br>1:30pm-2:30pm<br>@G925
+          </div>
         </div>
         <div class="col-md-9">
           <div class="block">
-            <h2>This Week</h2>
-            <div class="list-group" id="this-week">
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
-            </div>
-          </div>
-          <div class="block">
             <h2>Up Next</h2>
             <div class="list-group" id="up-next">
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
             </div>
           </div>
           <div class="block">
             <h2>Past Readings</h2>
-            <div class="list-group" id="past readings">
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
-              <div class="entry list-group-item">
-                <div class="entry-date">23<br>FEB</div>
-                <div class="entry-title"><h4 class="list-group-item-heading">Doing big things in little time</h4></div>
-                <div class="entry-authors">Anil Shanbhag and Firas Abuzaid</div>
-                <!-- <div class="entry-presenter">Anil S</div> -->
-              </div>
+            <div class="list-group" id="past-readings">
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script type='text/html' id='template'>
+<div class="entry list-group-item">
+  <div class="entry-date">{{entry-date}}</div>
+  <div class="entry-title"><h4 class="list-group-item-heading"><a href='{{entry-link}}'>{{entry-title}}</a></h4></div>
+  <div class="entry-presenter">Presenter: {{entry-presenter}}</div>
+</div>
+    </script>
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="static/js/app.js"></script>
